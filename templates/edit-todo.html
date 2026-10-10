@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block body_class %}auth-page{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class ="card">
+        <div class="card-header">
+            <h1>Edit Todo</h1>
+        </div>
+        <div class="card-body">
+            <form id="editTodoForm">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" name="title" value="{{todo.title}}" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control"  rows="3"  name="description" required>{{todo.description}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label >Priority</label>
+                    <select class="form-control" name="priority" required>
+                        
+                            {% for i in range(1, 6) %}
+                                {% if i == todo.priority %}
+                                    <option value="{{ i }}" selected>{{ i }}</option>
+                                {% else %}
+                                    <option value="{{ i }}">{{ i }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        
+                    </select>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" name="complete" id="complete" {% if todo.complete %}checked{% endif %}>
+                    <label class="form-check-label" for="complete">Complete</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Todo</button>
+                <button type="button" class="btn btn-danger" id="deleteButton">Delete</button>
+                <a href="/todos/todo-page" class="btn btn-secondary">back</a>
+            </form>
+        </div>
+    </div>  
+</div>
+
+
+
+
+
+{% endblock %}

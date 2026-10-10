@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block body_class %}auth-page{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="card text-center">
+
+        Your todo!
+    </div>
+    <div class="class-body">
+        <h5 class="card-title">Your todo list !
+        </h5>
+        <p class="card-text">Here is your todo list. You can add, edit, and delete tasks as needed. Stay organized and manage your tasks effectively!
+
+        </p>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>                  
+                    <th scope="col">info</th>               
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="todoTableBody">
+                {% for todo in todos %}
+                {%if todo.complete == False%}
+                <tr class="pointer">
+                       <td>{{loop.index}}</td>
+                       <td>{{todo.title}}</td>
+                       <td>
+                            <button onclick="window.location.href='/todos/edit-todo-page/{{todo.id}}'" type="button" class="btn btn-primary">Edit</button>
+
+                            </button>
+                       </td>
+                    </tr>
+                    {%else%}
+                    <tr class="pointer alert alert-success">
+                       <td>{{loop.index}}</td>
+                       <td class="strike-through-td">{{todo.title}}</td>
+                       <td>
+                            <button onclick="window.location.href='/todos/edit-todo-page/{{todo.id}}'" type="button" class="btn btn-primary">Edit</button>
+
+                            </button>
+                       </td>
+                    </tr>
+                    {%endif%}
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/todos/add-todo-page" class="btn btn-primary">Add Todo</a>
+    </div>
+
+    
+</div>
+
+
+
+
+
+{% endblock %}

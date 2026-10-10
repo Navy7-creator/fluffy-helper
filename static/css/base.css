@@ -1,0 +1,152 @@
+
+body {
+  background: #fafafa;
+  color: #33333a;
+  padding-top: 70px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #323232;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 38px 16px;
+  background: linear-gradient(135deg, #edf5f4 0%, #f7f8f6 54%, #fdf1e9 100%);
+}
+
+.auth-page .auth-container {
+  width: 100%;
+  max-width: 520px;
+}
+
+.auth-page .auth-card {
+  overflow: hidden;
+  border: 1px solid rgba(36, 71, 77, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 12px 26px rgba(36, 71, 77, 0.12),
+    0 2px 5px rgba(36, 71, 77, 0.06);
+}
+
+.auth-page .card-header {
+  padding: 22px 28px;
+  border: 0;
+  background: #285c61;
+  color: #fff;
+}
+
+.auth-page .card-header h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.auth-page .card-body {
+  padding: 26px 28px 24px;
+  background: #fff;
+}
+
+.auth-page .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.auth-page .form-row > .form-group {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.auth-page .form-group {
+  margin-bottom: 16px;
+}
+
+.auth-page label {
+  margin-bottom: 6px;
+  color: #40575b;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.auth-page .form-control {
+  min-height: 40px;
+  border: 1px solid #d6e1df;
+  border-radius: 7px;
+  background: #fcfdfc;
+}
+
+.auth-page .form-control:focus {
+  border-color: #4d8986;
+  box-shadow: 0 0 0 3px rgba(77, 137, 134, 0.14);
+}
+
+.auth-page .btn-primary {
+  min-width: 108px;
+  padding: 9px 20px;
+  border: 0;
+  border-radius: 7px;
+  background: #d8795f;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(216, 121, 95, 0.2);
+}
+
+.auth-page .btn-primary:hover {
+  background: #c96850;
+}
+
+.auth-page .card-footer {
+  padding: 15px 28px;
+  border: 0;
+  background: #f5f8f7;
+  color: #6b7c7e;
+  text-align: center;
+}
+
+.auth-page .card-footer p {
+  margin: 0;
+}
+
+.auth-page .card-footer a {
+  color: #285c61;
+  font-weight: 700;
+}
+
+@media (max-width: 575px) {
+  .auth-page {
+    padding: 20px 10px;
+  }
+
+  .auth-page .card-header,
+  .auth-page .card-body,
+  .auth-page .card-footer {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .auth-page .form-row > .form-group {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.main-color {
+  background-color: #0e76a8 ;
+}
+
+.strike-through-td {
+    text-decoration: line-through;
+}
+
+/* h1 {
+  color: red;
+} */
+
+
+
+
